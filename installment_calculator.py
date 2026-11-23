@@ -1,10 +1,10 @@
-unit_price = 4_000_000
-down_payment_pct = 0.10
-years = 8
+unit_price = float(input("Enter unit price (EGP): "))
+down_payment_pct = float(input("Enter down payment (%): ")) / 100
+years = int(input("Enter installment years: "))
 
 down_payment = unit_price * down_payment_pct
 remaining = unit_price - down_payment
 monthly_installment = remaining / (years * 12)
 
-print(f"Down Payment: {down_payment:,.0f} EGP")
+print(f"\nDown Payment: {down_payment:,.0f} EGP")
 print(f"Monthly Installment: {monthly_installment:,.0f} EGP")
